@@ -1,0 +1,71 @@
+// Prebuilt shadow for system/libvintf host tools
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_prebuilt_binary {
+    name: "assemble_vintf",
+    srcs: ["bin/assemble_vintf"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_binary {
+    name: "checkvintf",
+    srcs: ["bin/checkvintf"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_binary {
+    name: "vintffm",
+    srcs: ["bin/vintffm"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_library_static {
+    name: "libassemblevintf",
+    srcs: ["lib64/libassemblevintf.a"],
+    export_include_dirs: ["include"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_library_static {
+    name: "libvintffm",
+    srcs: ["lib64/libvintffm.a"],
+    export_include_dirs: ["include"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_library_static {
+    name: "libvintf_fcm_exclude",
+    srcs: ["lib64/libvintf_fcm_exclude.a"],
+    export_include_dirs: ["include"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
+
+cc_prebuilt_library_static {
+    name: "libvts_vintf_test_common",
+    srcs: ["lib64/libvts_vintf_test_common.a"],
+    export_include_dirs: ["include"],
+    check_elf_files: false,
+    prefer: true,
+    host_supported: true,
+    device_supported: false,
+}
